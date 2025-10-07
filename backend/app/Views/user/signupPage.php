@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lunara — Login</title>
+    <title>Lunara — Sign Up</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -18,7 +18,7 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* 🌙 Softer moon (same as signup.php) */
+        /* 🌙 Softer, smaller moon */
         .moon {
             position: absolute;
             top: 8%;
@@ -49,13 +49,17 @@
 
 <body class="flex items-center justify-center min-h-screen text-gray-100 relative">
 
-    <!-- Soft moon in background -->
+    <!-- Soft background moon -->
     <div class="moon"></div>
 
-    <!-- Login form -->
+    <!-- Sign-up form -->
     <div class="relative z-10 bg-white/10 backdrop-blur-md p-10 rounded-2xl shadow-2xl border border-white/20 w-full max-w-md">
-        <h2 class="text-center text-3xl font-bold mb-6 text-gradient">Welcome Back 🌸</h2>
+        <h2 class="text-center text-3xl font-bold mb-6 text-gradient">Join Lunara 🌸</h2>
         <form action="#" method="POST" class="space-y-5">
+            <div>
+                <label class="block text-sm font-semibold text-indigo-200 mb-2">Full Name</label>
+                <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Luna Floris">
+            </div>
             <div>
                 <label class="block text-sm font-semibold text-indigo-200 mb-2">Email Address</label>
                 <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="you@lunara.com">
@@ -64,12 +68,16 @@
                 <label class="block text-sm font-semibold text-indigo-200 mb-2">Password</label>
                 <input type="password" name="password" required class="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="••••••••">
             </div>
-            <button type="submit" class="w-full bg-indigo-400 hover:bg-indigo-500 text-gray-900 font-semibold py-3 rounded-full transition">Login</button>
+            <div>
+                <label class="block text-sm font-semibold text-indigo-200 mb-2">Confirm Password</label>
+                <input type="password" name="confirm_password" required class="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="••••••••">
+            </div>
+            <button type="submit" class="w-full bg-indigo-400 hover:bg-indigo-500 text-gray-900 font-semibold py-3 rounded-full transition">Create Account</button>
         </form>
 
         <p class="text-center text-gray-300 mt-6 text-sm">
-            Don’t have an account?
-            <a href="/signupPage" class="text-indigo-300 hover:text-indigo-400 font-semibold">Sign Up</a>
+            Already have an account?
+            <a href="/loginPage" class="text-indigo-300 hover:text-indigo-400 font-semibold">Login</a>
         </p>
 
         <p class="text-center mt-6">

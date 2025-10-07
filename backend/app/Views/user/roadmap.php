@@ -123,18 +123,9 @@
 <body class="text-gray-100 relative">
 
     <!-- Header -->
-    <header class="backdrop-blur-sm bg-white/10 border-b border-white/20 sticky top-0 z-50">
-        <div class="mx-auto flex justify-between items-center px-6 py-4 max-w-7xl">
-            <h1 class="font-bold text-2xl text-white tracking-wide">🌙 Lunara</h1>
-            <nav class="space-x-6 text-sm font-semibold flex items-center">
-                <a href="/" class="hover:text-indigo-300">Home</a>
-                <a href="/moodboard" class="hover:text-indigo-300">Moodboard</a>
-                <a href="/roadmap" class="text-indigo-300 border-b-2 border-indigo-400 pb-1">Roadmap</a>
-                <a href="/loginPage" class="ml-6 bg-indigo-400 hover:bg-indigo-500 text-gray-900 px-4 py-2 rounded-full font-semibold transition">Login</a>
-                <a href="/signupPage" class="bg-transparent border border-indigo-400 hover:bg-indigo-400/20 px-4 py-2 rounded-full text-indigo-300 font-semibold transition">Sign Up</a>
-            </nav>
-        </div>
-    </header>
+    <div class="text-center">
+        <?= view('components/header') ?>
+    </div>
 
     <!-- Hero Section -->
     <section class="relative text-center py-28 px-6 bg-gradient-to-b from-transparent to-[#0f0c1d]/80 overflow-hidden">
@@ -151,39 +142,14 @@
     </section>
 
     <!-- Roadmap Section -->
-    <section class="bg-white/5 backdrop-blur-md py-20 text-gray-100 fade-section">
-        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <?php
-            $phases = [
-                ["Moonseed Vision", "The spark of an idea — planting Lunara’s dream beneath the celestial sky."],
-                ["Petal Planning", "Mapping every fragrance and hue that will define our moonlit florals."],
-                ["Starlit Design", "Crafting visuals bathed in twilight elegance and gentle shimmer."],
-                ["Celestial Crafting", "Sculpting each product page and bloom card with lunar care."],
-                ["Bloom Launch", "Our first blossoms open to the world, kissed by starlight."],
-                ["Lunar Loyalty", "Creating heartfelt connections with those who share our glow."],
-                ["Nightshade Growth", "Expanding gardens and offerings under the soft lunar gaze."],
-                ["Moon Market", "Introducing curated sets and gifting rituals under the moon."],
-                ["Eclipse Evolution", "Refining the experience as petals drift into perfection."],
-                ["Galactic Grace", "A vision complete — Lunara glowing at the heart of night."]
-            ];
-            $colors = ["indigo", "purple", "pink", "violet", "fuchsia", "rose", "blue", "sky", "cyan", "amber"];
-            foreach ($phases as $i => $phase): ?>
-                <div class="flex flex-col bg-white/10 shadow-lg hover:shadow-2xl p-6 border border-<?= $colors[$i % count($colors)] ?>-400/40 rounded-2xl transition-all duration-300 card-hover">
-                    <h4 class="mb-2 font-semibold text-<?= $colors[$i % count($colors)] ?>-200 text-2xl header-title">
-                        🌸 Phase <?= $i + 1 ?>: <?= htmlspecialchars($phase[0]) ?>
-                    </h4>
-                    <p class="text-gray-300 leading-relaxed"><?= htmlspecialchars($phase[1]) ?></p>
-                </div>
-            <?php endforeach; ?>
-        </div>
-    </section>
+    <div class="text-center">
+        <?= view('components/cards/roadmap_card') ?>
+    </div>
 
     <!-- Footer -->
-    <footer class="mt-20 py-8 border-t border-white/20 bg-white/5 backdrop-blur-md text-center text-gray-400 text-sm">
-        <p>&copy; <?= date('Y') ?> Lunara — Crafted under the Moon. 🌙</p>
-        <p class="mt-1">Designed with <span class="text-indigo-300">Tailwind CSS</span> & PHP.</p>
-    </footer>
-
+    <div class="text-center">
+        <?= view('components/footer') ?>
+    </div>
 </body>
 
 </html>

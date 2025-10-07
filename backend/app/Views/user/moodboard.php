@@ -92,16 +92,9 @@ $card = [
     <div class="moon"></div>
 
     <!-- Header (same as landing) -->
-    <header class="backdrop-blur-sm bg-white/10 border-b border-white/20 sticky top-0 z-50">
-        <div class="mx-auto flex justify-between items-center px-6 py-4 max-w-7xl">
-            <h1 class="font-bold text-2xl text-white tracking-wide">🌙 Lunara</h1>
-            <nav class="space-x-6 text-sm font-semibold flex items-center">
-                <a href="index.php" class="hover:text-indigo-300">Home</a>
-                <a href="/loginPage" class="hover:text-indigo-300">Login</a>
-                <a href="/signupPage" class="hover:text-indigo-300">Sign Up</a>
-            </nav>
-        </div>
-    </header>
+    <div class="text-center">
+        <?= view('components/header') ?>
+    </div>
 
     <!-- Main moodboard container -->
     <main class="max-w-7xl mx-auto px-6 py-16 relative z-10">
@@ -229,9 +222,9 @@ $card = [
     </main>
 
     <!-- Footer (same style as landing) -->
-    <footer class="mt-20 py-8 border-t border-white/20 bg-white/5 backdrop-blur-md text-center text-gray-400 text-sm">
-        <p>&copy; <?= date('Y') ?> Lunara — Crafted under the Moon. 🌙</p>
-    </footer>
+    <div class="text-center">
+        <?= view('components/footer') ?>
+    </div>
 
 </body>
 

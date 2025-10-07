@@ -151,7 +151,7 @@ $products = [
                 <a href="/loginPage" class="ml-6 bg-indigo-400 hover:bg-indigo-500 text-gray-900 px-4 py-2 rounded-full font-semibold transition">
                     Login
                 </a>
-                <a href="signup.php" class="bg-transparent border border-indigo-400 hover:bg-indigo-400/20 px-4 py-2 rounded-full text-indigo-300 font-semibold transition">
+                <a href="/signupPage" class="bg-transparent border border-indigo-400 hover:bg-indigo-400/20 px-4 py-2 rounded-full text-indigo-300 font-semibold transition">
                     Sign Up
                 </a>
             </nav>

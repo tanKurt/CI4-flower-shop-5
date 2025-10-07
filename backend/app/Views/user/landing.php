@@ -25,8 +25,8 @@ $products = [
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lunara — Moonlit Floristry</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -141,22 +141,22 @@ $products = [
     <!-- Header -->
     <header class="backdrop-blur-sm bg-white/10 border-b border-white/20 sticky top-0 z-50">
         <div class="mx-auto flex justify-between items-center px-6 py-4 max-w-7xl">
-            <h1 class="font-bold text-2xl text-white tracking-wide">
-                🌙 Lunara
-            </h1>
+            <h1 class="font-bold text-2xl text-white tracking-wide">🌙 Lunara</h1>
+
             <nav class="space-x-6 text-sm font-semibold flex items-center">
                 <a href="#about" class="hover:text-indigo-300">About</a>
                 <a href="#products" class="hover:text-indigo-300">Flowers</a>
                 <a href="#contact" class="hover:text-indigo-300">Contact</a>
 
-                <!-- 🌕 Added Mood Board Button -->
+                <!-- Moodboard button linking to /moodboard -->
                 <a href="/moodboard" class="bg-gradient-to-r from-indigo-400 to-pink-400 hover:from-indigo-500 hover:to-pink-500 text-gray-900 px-4 py-2 rounded-full font-semibold transition">
-                    Mood Board
+                    Moodboard
                 </a>
 
                 <a href="/loginPage" class="ml-4 bg-indigo-400 hover:bg-indigo-500 text-gray-900 px-4 py-2 rounded-full font-semibold transition">
                     Login
                 </a>
+
                 <a href="/signupPage" class="bg-transparent border border-indigo-400 hover:bg-indigo-400/20 px-4 py-2 rounded-full text-indigo-300 font-semibold transition">
                     Sign Up
                 </a>
@@ -170,37 +170,46 @@ $products = [
             <div class="stars"></div>
             <div class="moon"></div>
         </div>
+
         <div class="relative z-10">
-            <h2 class="text-5xl md:text-6xl font-extrabold text-gradient mb-6 drop-shadow-lg">
-                Bloom Under the Moonlight
-            </h2>
+            <h2 class="text-5xl md:text-6xl font-extrabold text-gradient mb-6 drop-shadow-lg">Bloom Under the Moonlight</h2>
             <p class="max-w-2xl mx-auto text-lg text-gradient">
                 Welcome to <strong>Lunara</strong> — where each flower is kissed by starlight and crafted with lunar grace.
             </p>
-            <a href="#products" class="mt-8 inline-block bg-indigo-400 hover:bg-indigo-500 px-8 py-3 rounded-full font-semibold text-gray-900 transition">
-                Explore Collection
-            </a>
+            <a href="#products" class="mt-8 inline-block bg-indigo-400 hover:bg-indigo-500 px-8 py-3 rounded-full font-semibold text-gray-900 transition">Explore Collection</a>
         </div>
     </section>
 
     <!-- Products Section -->
     <section id="products" class="bg-white/5 backdrop-blur-md py-20 text-gray-100">
         <div class="mx-auto px-4 max-w-6xl">
-            <h3 class="mb-12 font-bold text-indigo-300 text-4xl text-center header-title">
-                Moonlit Blooms
-            </h3>
+            <h3 class="mb-12 font-bold text-indigo-300 text-4xl text-center header-title">Moonlit Blooms</h3>
+
             <div class="gap-8 grid md:grid-cols-3">
                 <?php foreach ($products as $product): ?>
                     <div class="flex flex-col bg-white/10 shadow-lg hover:shadow-2xl p-6 border border-white/20 rounded-2xl transition-all duration-300 card-hover">
-                        <div class="flex justify-center items-center bg-gray-700 mb-4 rounded-xl w-full h-56 overflow-hidden relative">
-                            <img src="<?= htmlspecialchars($product['image']) ?>" alt="Flower: <?= htmlspecialchars($product['title']) ?>" class="rounded-xl w-full h-full object-cover opacity-90 hover:opacity-100 transition">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        <!-- Image Section -->
+                        <div class="flex justify-center items-center bg-gray-700 mb-4 rounded-xl w-full h-56 overflow-hidden">
+                            <img
+                                src="<?= htmlspecialchars($product['image']) ?>"
+                                alt="Product: <?= htmlspecialchars($product['title']) ?>"
+                                class="rounded-xl w-full h-full object-cover"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="hidden flex justify-center items-center bg-gradient-to-br from-[#8B7E74]/20 to-transparent rounded-xl w-full h-56 text-3xl">
+                                🌸
+                            </div>
                         </div>
+
+                        <!-- Title -->
                         <h4 class="mb-2 font-semibold text-indigo-200 text-2xl header-title"><?= htmlspecialchars($product['title']) ?></h4>
+
+                        <!-- Description -->
                         <p class="flex-grow mb-4 text-gray-300 leading-relaxed"><?= htmlspecialchars($product['description']) ?></p>
+
+                        <!-- Price and Button -->
                         <div class="flex justify-between items-center mt-auto">
                             <span class="font-bold text-indigo-300 text-xl">₱<?= htmlspecialchars($product['price']) ?></span>
-                            <a href="#" class="bg-indigo-400 hover:bg-indigo-500 px-4 py-2 rounded-full font-semibold text-gray-900 text-sm transition">Buy Now</a>
+                            <a href="#" class="bg-indigo-400 hover:bg-indigo-500 px-4 py-2 rounded-full focus:outline-none focus:ring-indigo-300/50 focus:ring-2 font-semibold text-gray-900 text-sm transition">Buy Now</a>
                         </div>
                     </div>
                 <?php endforeach; ?>

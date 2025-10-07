@@ -148,7 +148,13 @@ $products = [
                 <a href="#about" class="hover:text-indigo-300">About</a>
                 <a href="#products" class="hover:text-indigo-300">Flowers</a>
                 <a href="#contact" class="hover:text-indigo-300">Contact</a>
-                <a href="/loginPage" class="ml-6 bg-indigo-400 hover:bg-indigo-500 text-gray-900 px-4 py-2 rounded-full font-semibold transition">
+
+                <!-- 🌕 Added Mood Board Button -->
+                <a href="/moodboard" class="bg-gradient-to-r from-indigo-400 to-pink-400 hover:from-indigo-500 hover:to-pink-500 text-gray-900 px-4 py-2 rounded-full font-semibold transition">
+                    Mood Board
+                </a>
+
+                <a href="/loginPage" class="ml-4 bg-indigo-400 hover:bg-indigo-500 text-gray-900 px-4 py-2 rounded-full font-semibold transition">
                     Login
                 </a>
                 <a href="/signupPage" class="bg-transparent border border-indigo-400 hover:bg-indigo-400/20 px-4 py-2 rounded-full text-indigo-300 font-semibold transition">

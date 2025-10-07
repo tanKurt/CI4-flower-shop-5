@@ -148,9 +148,14 @@ $products = [
                 <a href="#products" class="hover:text-indigo-300">Flowers</a>
                 <a href="#contact" class="hover:text-indigo-300">Contact</a>
 
-                <!-- Moodboard button linking to /moodboard -->
+                <!-- Moodboard button -->
                 <a href="/moodboard" class="bg-gradient-to-r from-indigo-400 to-pink-400 hover:from-indigo-500 hover:to-pink-500 text-gray-900 px-4 py-2 rounded-full font-semibold transition">
                     Moodboard
+                </a>
+
+                <!-- 🌙 Roadmap button -->
+                <a href="/roadmap" class="bg-gradient-to-r from-pink-400 to-indigo-400 hover:from-pink-500 hover:to-indigo-500 text-gray-900 px-4 py-2 rounded-full font-semibold transition">
+                    Roadmap
                 </a>
 
                 <a href="/loginPage" class="ml-4 bg-indigo-400 hover:bg-indigo-500 text-gray-900 px-4 py-2 rounded-full font-semibold transition">
@@ -188,25 +193,14 @@ $products = [
             <div class="gap-8 grid md:grid-cols-3">
                 <?php foreach ($products as $product): ?>
                     <div class="flex flex-col bg-white/10 shadow-lg hover:shadow-2xl p-6 border border-white/20 rounded-2xl transition-all duration-300 card-hover">
-                        <!-- Image Section -->
                         <div class="flex justify-center items-center bg-gray-700 mb-4 rounded-xl w-full h-56 overflow-hidden">
-                            <img
-                                src="<?= htmlspecialchars($product['image']) ?>"
-                                alt="Product: <?= htmlspecialchars($product['title']) ?>"
-                                class="rounded-xl w-full h-full object-cover"
-                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <img src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['title']) ?>" class="rounded-xl w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="hidden flex justify-center items-center bg-gradient-to-br from-[#8B7E74]/20 to-transparent rounded-xl w-full h-56 text-3xl">
                                 🌸
                             </div>
                         </div>
-
-                        <!-- Title -->
                         <h4 class="mb-2 font-semibold text-indigo-200 text-2xl header-title"><?= htmlspecialchars($product['title']) ?></h4>
-
-                        <!-- Description -->
                         <p class="flex-grow mb-4 text-gray-300 leading-relaxed"><?= htmlspecialchars($product['description']) ?></p>
-
-                        <!-- Price and Button -->
                         <div class="flex justify-between items-center mt-auto">
                             <span class="font-bold text-indigo-300 text-xl">₱<?= htmlspecialchars($product['price']) ?></span>
                             <a href="#" class="bg-indigo-400 hover:bg-indigo-500 px-4 py-2 rounded-full focus:outline-none focus:ring-indigo-300/50 focus:ring-2 font-semibold text-gray-900 text-sm transition">Buy Now</a>

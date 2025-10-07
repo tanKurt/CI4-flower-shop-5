@@ -44,7 +44,7 @@ $products = [
             transform: translateY(-6px);
         }
 
-        /* 🌙 Parallax Moon with Crescent Shadow */
+        /* 🌙 Parallax Moon */
         .moon-container {
             position: absolute;
             top: 0;
@@ -70,7 +70,6 @@ $products = [
             overflow: hidden;
         }
 
-        /* 🌘 Crescent shadow layer */
         .moon::after {
             content: "";
             position: absolute;
@@ -97,7 +96,7 @@ $products = [
             }
         }
 
-        /* ✨ Twinkling stars */
+        /* ✨ Stars */
         .stars::before,
         .stars::after {
             content: "";
@@ -107,15 +106,9 @@ $products = [
             background: white;
             border-radius: 50%;
             box-shadow:
-                100px 40px white,
-                300px 80px white,
-                500px 120px white,
-                700px 50px white,
-                900px 100px white,
-                200px 150px white,
-                600px 200px white,
-                800px 180px white,
-                400px 250px white;
+                100px 40px white, 300px 80px white, 500px 120px white,
+                700px 50px white, 900px 100px white, 200px 150px white,
+                600px 200px white, 800px 180px white, 400px 250px white;
             animation: twinkle 4s infinite ease-in-out alternate;
         }
 
@@ -135,7 +128,6 @@ $products = [
             scroll-margin-top: 80px;
         }
 
-        /* 🪶 Text gradient for headline */
         .text-gradient {
             background: linear-gradient(90deg, #d8b4fe, #f9a8d4);
             -webkit-background-clip: text;
@@ -152,10 +144,16 @@ $products = [
             <h1 class="font-bold text-2xl text-white tracking-wide">
                 🌙 Lunara
             </h1>
-            <nav class="space-x-6 text-sm font-semibold">
+            <nav class="space-x-6 text-sm font-semibold flex items-center">
                 <a href="#about" class="hover:text-indigo-300">About</a>
                 <a href="#products" class="hover:text-indigo-300">Flowers</a>
                 <a href="#contact" class="hover:text-indigo-300">Contact</a>
+                <a href="/loginPage" class="ml-6 bg-indigo-400 hover:bg-indigo-500 text-gray-900 px-4 py-2 rounded-full font-semibold transition">
+                    Login
+                </a>
+                <a href="signup.php" class="bg-transparent border border-indigo-400 hover:bg-indigo-400/20 px-4 py-2 rounded-full text-indigo-300 font-semibold transition">
+                    Sign Up
+                </a>
             </nav>
         </div>
     </header>
@@ -185,34 +183,18 @@ $products = [
             <h3 class="mb-12 font-bold text-indigo-300 text-4xl text-center header-title">
                 Moonlit Blooms
             </h3>
-
             <div class="gap-8 grid md:grid-cols-3">
                 <?php foreach ($products as $product): ?>
                     <div class="flex flex-col bg-white/10 shadow-lg hover:shadow-2xl p-6 border border-white/20 rounded-2xl transition-all duration-300 card-hover">
                         <div class="flex justify-center items-center bg-gray-700 mb-4 rounded-xl w-full h-56 overflow-hidden relative">
-                            <img
-                                src="<?= htmlspecialchars($product['image']) ?>"
-                                alt="Flower: <?= htmlspecialchars($product['title']) ?>"
-                                class="rounded-xl w-full h-full object-cover opacity-90 hover:opacity-100 transition">
+                            <img src="<?= htmlspecialchars($product['image']) ?>" alt="Flower: <?= htmlspecialchars($product['title']) ?>" class="rounded-xl w-full h-full object-cover opacity-90 hover:opacity-100 transition">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                         </div>
-
-                        <h4 class="mb-2 font-semibold text-indigo-200 text-2xl header-title">
-                            <?= htmlspecialchars($product['title']) ?>
-                        </h4>
-
-                        <p class="flex-grow mb-4 text-gray-300 leading-relaxed">
-                            <?= htmlspecialchars($product['description']) ?>
-                        </p>
-
+                        <h4 class="mb-2 font-semibold text-indigo-200 text-2xl header-title"><?= htmlspecialchars($product['title']) ?></h4>
+                        <p class="flex-grow mb-4 text-gray-300 leading-relaxed"><?= htmlspecialchars($product['description']) ?></p>
                         <div class="flex justify-between items-center mt-auto">
-                            <span class="font-bold text-indigo-300 text-xl">
-                                ₱<?= htmlspecialchars($product['price']) ?>
-                            </span>
-                            <a href="#"
-                                class="bg-indigo-400 hover:bg-indigo-500 px-4 py-2 rounded-full focus:outline-none focus:ring-indigo-300/50 focus:ring-2 font-semibold text-gray-900 text-sm transition">
-                                Buy Now
-                            </a>
+                            <span class="font-bold text-indigo-300 text-xl">₱<?= htmlspecialchars($product['price']) ?></span>
+                            <a href="#" class="bg-indigo-400 hover:bg-indigo-500 px-4 py-2 rounded-full font-semibold text-gray-900 text-sm transition">Buy Now</a>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -223,11 +205,8 @@ $products = [
     <!-- Footer -->
     <footer class="mt-20 py-8 border-t border-white/20 bg-white/5 backdrop-blur-md text-center text-gray-400 text-sm">
         <p>&copy; <?= date('Y') ?> Lunara — Crafted under the Moon. 🌙</p>
-        <p class="mt-1">
-            Designed with <span class="text-indigo-300">Tailwind CSS</span> & PHP.
-        </p>
+        <p class="mt-1">Designed with <span class="text-indigo-300">Tailwind CSS</span> & PHP.</p>
     </footer>
-
 </body>
 
 </html>

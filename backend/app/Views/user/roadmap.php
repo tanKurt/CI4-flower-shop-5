@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lunara — Roadmap</title>
+    <link rel="shortcut icon" type="image/png" href="/assets/lunaraMoonIcon.ico" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {

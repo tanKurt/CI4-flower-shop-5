@@ -149,6 +149,7 @@
             </div>
         </div>
     </section>
+
     <!-- Footer -->
     <div class="text-center">
         <?= view('components/footer') ?>

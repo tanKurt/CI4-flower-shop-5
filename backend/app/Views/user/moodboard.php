@@ -51,7 +51,7 @@
             }
         }
 
-        /* card-hover same as landing */
+        /* card-hover */
         .card-hover:hover {
             transform: translateY(-6px);
         }
@@ -83,7 +83,6 @@
             flex-direction: column;
             justify-content: space-between;
             min-height: 340px;
-            /* adjust for symmetry */
         }
 
         .panel h3 {
@@ -97,7 +96,7 @@
 
     <div class="moon"></div>
 
-    <!-- Header (same as landing) -->
+    <!-- Header -->
     <div class="text-center">
         <?= view('components/header') ?>
     </div>
@@ -108,7 +107,7 @@
         <h2 class="text-5xl font-extrabold text-gradient text-center mb-10">Lunara — Moodboard</h2>
         <p class="text-center text-gray-300 max-w-3xl mx-auto mb-12">Design system and visual references: color, typography, UI components and logo variations — presented using Lunara's moonlit theme.</p>
 
-        <!-- Grid layout resembling the reference: 2-column on large screens -->
+        <!-- Grid layout -->
         <section class="mb-grid">
             <!-- Color System -->
             <div class="panel">
@@ -158,7 +157,7 @@
                 </div>
             </div>
 
-            <!-- Card Samples (spans full width on large screens) -->
+            <!-- Card Samples -->
             <div class="panel lg:col-span-2">
                 <div>
                     <h3 class="text-2xl font-bold text-indigo-300 mb-6">Card Samples</h3>
@@ -227,10 +226,10 @@
         'title' => 'Step Into Lunara’s World',
         'subtitle' => 'Discover celestial-inspired designs, curated just for dreamers and creators like you.',
         'buttonLabel' => 'Explore Now',
-        'buttonHref' => '#explore'
+        'buttonHref' => '/'
     ]) ?>
 
-    <!-- Footer (same style as landing) -->
+    <!-- Footer-->
     <div class="text-center">
         <?= view('components/footer') ?>
     </div>

@@ -101,46 +101,12 @@ Run the development stack and the app (rebuild if needed):
 docker compose up --watch
 ```
 
-Common utility commands (run inside the project root):
-
-- Run migrations:
-```cmd
-docker compose exec php composer migrate
-```
-- Run seeders:
-```cmd
-docker compose exec php composer seed
-```
-- Run tests:
-```cmd
-docker compose exec php composer test
-```
-
-- Create a migration (using CodeIgniter's spark tool):
-```cmd
-docker compose exec php php spark make:migration CreateUsersTabel
-```
-
-- Create a model (using CodeIgniter's spark tool):
-
-```cmd
-docker compose exec php php spark make:model UsemModel
-```
-
-- Create an entity (value object for a single record) (using CodeIgniter's spark tool):
-```cmd
-docker compose exec php php spark make:entity Uzer
-```
 
 - Create a controller (add --resource to scaffold resourceful methods if you like) (using CodeIgniter's spark tool):
 ```cmd
 docker compose exec php php spark make:controller Usars
 ```
 
-- Create a seeder (for test/dev data) (using CodeIgniter's spark tool):
-```cmd
-docker compose exec php php spark make:seeder UserzSeeder
-```
 
 If you prefer, you can include `-f "compose.yaml"` explicitly; the shorter commands above work when running from the repo root.
 
@@ -151,8 +117,7 @@ Defaults used in this project (host mapping):
 | Service     | Host port |
 |-------------|-----------:|
 | nginx (app) | 8090      |
-| phpMyAdmin  | 8091      |
-| MySQL       | 3390      |
+
 
 Database credentials used in examples and CI:
 

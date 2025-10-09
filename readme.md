@@ -5,7 +5,7 @@
 
 <div align="center">
   <a href="https://github.com/tanKurt">
-    <img src="/assets/picturenikurt.jpg" alt="Kurt" width="130" height="100">
+    <img src="backend/public/assets/picturenikurt.jpg" alt="Kurt" width="130" height="100">
   </a>
 <!-- * Title Section -->
   <h3 align="center">Lunara Flower Shop</h3>

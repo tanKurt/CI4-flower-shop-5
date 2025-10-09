@@ -143,8 +143,63 @@
     </section>
 
     <!-- Roadmap Section -->
-    <div class="text-center">
-        <?= view('components/cards/roadmap_card') ?>
+    <div class="gap-8 grid md:grid-cols-3">
+        <?= view('components/cards/roadmap_card', [
+            'title' => 'User (CRUD)',
+            'description' => 'CREATE - SIGNUP (USER), READ - USER LIST (ADMIN), UPDATE - BLOCK USER/CHANGE PRIVILEGE (ADMIN), UPDATE - CHANGE USER INFO (USER), DELETE - DEACTIVATE ACCOUNT (USER/ADMIN)',
+            'status' => 'In Progress',
+            'priority' => 'High',
+            'statusClass' => 'bg-[#ffb74d]'
+        ]) ?>
+
+        <?= view('components/cards/roadmap_card', [
+            'title' => 'Service (CRUD)',
+            'description' => 'CREATE/UPDATE - FLOWER STOCK (ADMIN), READ - FLOWER STOCK (ADMIN/USER), DELETE - STOCK (ADMIN)',
+            'status' => 'In Progress',
+            'priority' => 'High',
+            'statusClass' => 'bg-[#ffb74d]'
+        ]) ?>
+
+        <?= view('components/cards/roadmap_card', [
+            'title' => 'Request (CRUD)',
+            'description' => 'CREATE - REQUEST SERVICE (CUSTOMER/ADMIN), UPDATE - EXISTING REQUEST (CUSTOMER/ADMIN), READ - REQUEST LIST (CUSTOMER/ADMIN), DELETE - REMOVE REQUEST (CUSTOMER/ADMIN)',
+            'status' => 'In Progress',
+            'priority' => 'High',
+            'statusClass' => 'bg-[#ffb74d]'
+        ]) ?>
+
+        <?= view('components/cards/roadmap_card', [
+            'title' => 'Create catalog',
+            'description' => 'Create a catalog of flowers in stock',
+            'status' => 'Planned',
+            'priority' => 'Medium',
+            'statusClass' => 'bg-[#64b5f6]'
+        ]) ?>
+
+        <?= view('components/cards/roadmap_card', [
+            'title' => 'Polish website',
+            'description' => 'Apply polish to all webpages',
+            'status' => 'In Progress',
+            'priority' => 'High',
+            'statusClass' => 'bg-[#ffb74d]'
+        ]) ?>
+
+        <?= view('components/cards/roadmap_card', [
+            'title' => 'Website Bloom Update',
+            'description' => 'Enhance the Lunara experience dynamic moonlight effects.',
+            'status' => 'Done',
+            'priority' => 'High',
+            'statusClass' => 'bg-[#81c784]'
+        ]) ?>
+
+        <?= view('components/cards/roadmap_card', [
+            'title' => 'Implement database',
+            'description' => 'Implement database for data storing',
+            'status' => 'Planned',
+            'priority' => 'Medium',
+            'statusClass' => 'bg-[#64b5f6]'
+        ]) ?>
+
     </div>
 
     <!-- Footer -->

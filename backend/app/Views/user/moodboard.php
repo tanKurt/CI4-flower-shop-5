@@ -189,35 +189,25 @@
                 <div>
                     <h3 class="text-2xl font-bold text-indigo-300 mb-4">Logos</h3>
                     <div class="flex gap-6 items-center flex-wrap">
+                        <!-- Circle Logo -->
                         <div class="flex flex-col items-center">
-                            <div class="w-28 h-28 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
-                                <svg width="56" height="56" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <radialGradient id="g1" cx="50%" cy="30%">
-                                            <stop offset="0%" stop-color="#f9f9f9" />
-                                            <stop offset="100%" stop-color="#d8d8d8" />
-                                        </radialGradient>
-                                    </defs>
-                                    <circle cx="32" cy="24" r="18" fill="url(#g1)" />
-                                    <path d="M20 44c6-6 18-6 24 0" stroke="#f9a8d4" stroke-width="2.5" stroke-linecap="round" />
-                                </svg>
+                            <div class="w-28 h-28 rounded-full bg-white/10 border border-white/20 flex items-center justify-center overflow-hidden">
+                                <img src="assets/LunaraMoonIcon.png" alt="Lunara Circle Logo" class="w-20 h-20 object-contain">
                             </div>
                             <p class="mt-3 text-gray-300 text-sm">Circle Logo</p>
                         </div>
+
+                        <!-- Square Logo -->
                         <div class="flex flex-col items-center">
-                            <div class="w-28 h-28 bg-white/10 border border-white/20 rounded-2xl flex items-center justify-center">
-                                <svg width="56" height="56" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="8" y="8" width="48" height="48" rx="8" fill="url(#g1)" />
-                                    <path d="M18 38c5-5 14-5 19 0" stroke="#d8b4fe" stroke-width="2.2" stroke-linecap="round" />
-                                </svg>
+                            <div class="w-28 h-28 bg-white/10 border border-white/20 rounded-2xl flex items-center justify-center overflow-hidden">
+                                <img src="assets/LunaraMoonSquare.png" alt="Lunara Square Logo" class="w-20 h-20 object-contain">
                             </div>
                             <p class="mt-3 text-gray-300 text-sm">Square Logo</p>
                         </div>
                     </div>
-                    <p class="mt-4 text-gray-300 text-sm">Placeholder markups: use the SVGs above as guides for production logos (circle & square formats).</p>
+                    <p class="mt-4 text-gray-300 text-sm">Circle and square logos of Lunara Flower Shop</p>
                 </div>
             </div>
-        </section>
 
     </main>
 

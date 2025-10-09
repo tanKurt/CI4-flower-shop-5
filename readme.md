@@ -101,7 +101,6 @@ Run the development stack and the app (rebuild if needed):
 docker compose up --watch
 ```
 
-
 - Create a controller (add --resource to scaffold resourceful methods if you like) (using CodeIgniter's spark tool):
 ```cmd
 docker compose exec php php spark make:controller Usars

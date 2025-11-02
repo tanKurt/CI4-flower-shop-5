@@ -26,7 +26,7 @@ class UsersSeeder extends Seeder
                 'city' => 'Lumban',
                 'province' => 'Laguna',
                 'postal_code' => '4014',
-                'type' => 'client',
+                'type' => 'admin',
                 'account_status' => '1',
                 'email_activated' => '1',
                 'created_at' => $now,

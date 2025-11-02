@@ -45,10 +45,6 @@ class CreateUsersTable extends Migration
                 'constraint' => 20,
                 'null'       => true,
             ],
-            'birth_date' => [
-                'type' => 'DATE',
-                'null' => true,
-            ],
             'phone_number' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 20,
@@ -88,33 +84,6 @@ class CreateUsersTable extends Migration
                 'type'       => 'TINYINT',
                 'constraint' => 1,
                 'default'    => 0,
-            ],
-            'newsletter' => [
-                'type'       => 'TINYINT',
-                'constraint' => 1,
-                'default'    => 1,
-            ],
-            'total_orders' => [
-                'type'       => 'INT',
-                'constraint' => 11,
-                'default'    => 0,
-            ],
-            'last_purchase' => [
-                'type' => 'DATETIME',
-                'null' => true,
-            ],
-            'last_login' => [
-                'type' => 'DATETIME',
-                'null' => true,
-            ],
-            'reset_token' => [
-                'type'       => 'VARCHAR',
-                'constraint' => 255,
-                'null'       => true,
-            ],
-            'reset_token_expiration' => [
-                'type' => 'DATETIME',
-                'null' => true,
             ],
             'profile_image' => [
                 'type'       => 'VARCHAR',

@@ -4,17 +4,16 @@
 <br/>
 
 <div align="center">
-  <a href="https://github.com/zyx-0314/">
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+  <a href="https://github.com/tanKurt">
+    <img src="backend/public/assets/picturenikurt.jpg" alt="Kurt" width="130" height="100">
   </a>
 <!-- * Title Section -->
-  <h3 align="center">AD - CI4 Template</h3>
+  <h3 align="center">Lunara Flower Shop</h3>
 </div>
 
 <!-- * Description Section -->
 <div align="center">
-This repository is a beginner-friendly CodeIgniter 4 template.  
-It helps teams quickly bootstrap backend + frontend projects, with simple sample modules that show how to extend the system.
+Lunara Flower Shop is a haven for flower enthusiasts and dreamers alike. We specialize in curated floral arrangements that capture the beauty, color, and emotion of every season. From elegant bouquets to bespoke creations for weddings, events, or personal moments, Lunara transforms petals into art. Our passion is crafting experiences that delight the senses, brighten spaces, and make every occasion unforgettable.
 </div>
 
 <br/>
@@ -90,11 +89,6 @@ These are **sample modules** included (or suggested) for learning how to add fea
 
 #### Databases
 
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge\&logo=postgresql\&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge\&logo=mongodb\&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge\&logo=firebase\&logoColor=black)
-
 <!-- ! Keep only the used technology -->
 
 ---
@@ -107,46 +101,11 @@ Run the development stack and the app (rebuild if needed):
 docker compose up --watch
 ```
 
-Common utility commands (run inside the project root):
-
-- Run migrations:
-```cmd
-docker compose exec php composer migrate
-```
-- Run seeders:
-```cmd
-docker compose exec php composer seed
-```
-- Run tests:
-```cmd
-docker compose exec php composer test
-```
-
-- Create a migration (using CodeIgniter's spark tool):
-```cmd
-docker compose exec php php spark make:migration CreateUsersTabel
-```
-
-- Create a model (using CodeIgniter's spark tool):
-
-```cmd
-docker compose exec php php spark make:model UsemModel
-```
-
-- Create an entity (value object for a single record) (using CodeIgniter's spark tool):
-```cmd
-docker compose exec php php spark make:entity Uzer
-```
-
 - Create a controller (add --resource to scaffold resourceful methods if you like) (using CodeIgniter's spark tool):
 ```cmd
 docker compose exec php php spark make:controller Usars
 ```
 
-- Create a seeder (for test/dev data) (using CodeIgniter's spark tool):
-```cmd
-docker compose exec php php spark make:seeder UserzSeeder
-```
 
 If you prefer, you can include `-f "compose.yaml"` explicitly; the shorter commands above work when running from the repo root.
 
@@ -157,8 +116,7 @@ Defaults used in this project (host mapping):
 | Service     | Host port |
 |-------------|-----------:|
 | nginx (app) | 8090      |
-| phpMyAdmin  | 8091      |
-| MySQL       | 3390      |
+
 
 Database credentials used in examples and CI:
 
@@ -220,8 +178,6 @@ AD-ProjectName/
 | ----------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | ChatGPT                 | General AI assistance for planning application architecture and docs. | [https://chat.openai.com](https://chat.openai.com)                         |
 | GitHub Copilot          | In-IDE code suggestions and boilerplate generation.                   | [https://github.com/features/copilot](https://github.com/features/copilot) |
-| YouTube “UI/UX Design”  | Video tutorials on modern web interface layouts and patterns.         | [https://www.youtube.com](https://www.youtube.com)                         |
-| Pinterest Design Boards | Inspiration for color schemes, typography, and component layouts.     | [https://www.pinterest.com](https://www.pinterest.com)                     |
 | Google Photos (Assets)  | Stock imagery and graphics used in UI mockups and documentation.      | [https://photos.google.com](https://photos.google.com)                     |
 | System Documentation    | Internal docs from PHP, MongoDB, and PostgreSQL used in development.  | — (see `/docs` folder in repo)                                             |
 

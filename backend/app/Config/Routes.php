@@ -6,14 +6,14 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Users::index');
-$routes->get('/loginPage', 'Users::login');
-$routes->get('/signupPage', 'Users::signup');
+$routes->get('/login', 'Auth::showLogin');
+$routes->get('/signup', 'Auth::showSignup');
 $routes->get('/moodboard', 'Users::moodboard');
 $routes->get('/roadmap', 'Users::roadmap');
 
-$routes->get('/admin/dashboard', 'Admin::showDashboardPage');
+$routes->get('/admin/dashboard', 'Admin::dashboard');
 
 
-$routes->post('loginPage', 'Auth::login');
+$routes->post('login', 'Auth::login');
 $routes->post('logout', 'Auth::logout');
-$routes->post('signupPage', 'Auth::signup');
+$routes->post('signup', 'Auth::signup');

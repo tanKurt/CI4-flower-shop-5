@@ -45,6 +45,12 @@
                 transform: translate(-50%, -15px);
             }
         }
+
+        .error-text {
+            color: #f87171;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
     </style>
 </head>
 
@@ -56,15 +62,38 @@
     <!-- Login form -->
     <div class="relative z-10 bg-white/10 backdrop-blur-md p-10 rounded-2xl shadow-2xl border border-white/20 w-full max-w-md">
         <h2 class="text-center text-3xl font-bold mb-6 text-gradient">Welcome Back 🌸</h2>
-        <form action="#" method="POST" class="space-y-5">
+
+        <!-- Display general login error (account doesn't exist / invalid credentials) -->
+        <?php if (!empty($login_error)): ?>
+            <p class="error-text text-center mb-4"><?= esc($login_error) ?></p>
+        <?php endif; ?>
+
+        <form action="/login" method="POST" class="space-y-5" novalidate>
+            <?= csrf_field() ?>
+
             <div>
                 <label class="block text-sm font-semibold text-indigo-200 mb-2">Email Address</label>
-                <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="you@lunara.com">
+                <input type="email" name="email" required
+                    value="<?= esc($old['email'] ?? '') ?>"
+                    class="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400
+                    <?= isset($errors['email']) ? 'border border-red-500' : 'border border-white/30' ?>"
+                    placeholder="you@lunara.com">
+                <?php if (!empty($errors['email'])): ?>
+                    <p class="error-text"><?= esc($errors['email']) ?></p>
+                <?php endif; ?>
             </div>
+
             <div>
                 <label class="block text-sm font-semibold text-indigo-200 mb-2">Password</label>
-                <input type="password" name="password" required class="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="••••••••">
+                <input type="password" name="password" required
+                    class="w-full px-4 py-3 rounded-lg bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400
+                    <?= isset($errors['password']) ? 'border border-red-500' : 'border border-white/30' ?>"
+                    placeholder="••••••••">
+                <?php if (!empty($errors['password'])): ?>
+                    <p class="error-text"><?= esc($errors['password']) ?></p>
+                <?php endif; ?>
             </div>
+
             <button type="submit" class="w-full bg-indigo-400 hover:bg-indigo-500 text-gray-900 font-semibold py-3 rounded-full transition">Login</button>
         </form>
 
